@@ -38,7 +38,7 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'mhinz/vim-startify'
 " Highlighting
 " Plug 'sheerun/vim-polyglot'
-Plug 'numirias/semshi'
+Plug 'numirias/semshi', {'do': ':UpdateRemotePlugins'}
 
 " List ends here. Plugins become visible to Vim after this call.
 call plug#end()
