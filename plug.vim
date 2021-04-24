@@ -25,8 +25,10 @@ Plug 'w0rp/ale'
 " Autocompletion
 " had do do `conda install -c anaconda libstdcxx-ng`
 " Plug 'valloric/youcompleteme'
-Plug 'shougo/deoplete.nvim'
-Plug 'deoplete-plugins/deoplete-jedi'
+" Plug 'shougo/deoplete.nvim'
+" Plug 'deoplete-plugins/deoplete-jedi'
+Plug 'neoclide/coc.nvim'
+
 " To Comment stuff
 Plug 'scrooloose/nerdcommenter'
 " Snipsets

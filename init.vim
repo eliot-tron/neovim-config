@@ -43,12 +43,18 @@ let g:ale_fixers = {
 
 " Deoplete options
 " ----------------
-let g:deoplete#enable_at_startup = 1
-let g:deoplete#sources#jedi#show_docstring=1
-autocmd InsertLeave,CompleteDone * if pumvisible() == 0 | silent! pclose | endif
-set splitbelow
-inoremap <expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
-inoremap <expr><s-tab> pumvisible() ? "\<c-p>" : "\<s-tab>"
+" let g:deoplete#enable_at_startup = 1
+" let g:deoplete#sources#jedi#show_docstring=1
+" autocmd InsertLeave,CompleteDone * if pumvisible() == 0 | silent! pclose | endif
+" set splitbelow
+" inoremap <expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
+" inoremap <expr><s-tab> pumvisible() ? "\<c-p>" : "\<s-tab>"
+
+" CoC options
+" -----------
+inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
+inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
+inoremap <silent><expr> <c-space> coc#refresh()
 
 " NERD Commenter options
 " ----------------------
