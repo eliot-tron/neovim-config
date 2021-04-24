@@ -14,6 +14,10 @@ set clipboard=unnamedplus
 set ignorecase	" Do case insensitive matching
 " Folding
 set foldmethod=indent
+set smartindent " Indentation intelligente
+set autoindent " Conserve l'indentation sur une nouvelle ligne
+set ruler " Affiche la position du curseur
+
 
 " spell check
 set spell
@@ -32,10 +36,19 @@ let g:ale_fixers = {
 
 " YouCompleteMe options
 " ---------------------
-set encoding=utf-8
-let g:ycm_autoclose_preview_window_after_insertion = 1
-let g:ycm_autoclose_preview_window_after_completion = 1
-let g:ycm_use_ultisnips_completer = 1
+" set encoding=utf-8
+" let g:ycm_autoclose_preview_window_after_insertion = 1
+" let g:ycm_autoclose_preview_window_after_completion = 1
+" let g:ycm_use_ultisnips_completer = 1
+
+" Deoplete options
+" ----------------
+let g:deoplete#enable_at_startup = 1
+let g:deoplete#sources#jedi#show_docstring=1
+autocmd InsertLeave,CompleteDone * if pumvisible() == 0 | silent! pclose | endif
+set splitbelow
+inoremap <expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
+inoremap <expr><s-tab> pumvisible() ? "\<c-p>" : "\<s-tab>"
 
 " NERD Commenter options
 " ----------------------

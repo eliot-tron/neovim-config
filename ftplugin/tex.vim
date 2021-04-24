@@ -9,5 +9,12 @@ let g:vimtex_fold_enabled = 1
 " let g:vimtex_indent_enabled = 0
 let g:vimtex_compiler_progname = 'nvr'
 let g:vimetex_quickfix_method = "pplatex"
+" let g:vimetex_au
+
+" To enable automatic completion with youcompleteme
+if !exists('g:ycm_semantic_triggers')
+	let g:ycm_semantic_triggers = {}
+endif
+au VimEnter * let g:ycm_semantic_triggers.tex=g:vimtex#re#youcompleteme
 
 nnoremap <leader>t :VimtexTocToggle <cr>
