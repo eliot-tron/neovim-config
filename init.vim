@@ -1,3 +1,5 @@
+let g:ale_disable_lsp = 1
+
 " plug-Vim conf:
 source ~/.config/nvim/plug.vim
 
