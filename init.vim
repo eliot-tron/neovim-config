@@ -19,7 +19,7 @@ set foldmethod=indent
 set smartindent " Indentation intelligente
 set autoindent " Conserve l'indentation sur une nouvelle ligne
 set ruler " Affiche la position du curseur
-
+set linebreak
 
 " spell check
 set spell
