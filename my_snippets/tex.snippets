@@ -15,15 +15,17 @@ endglobal
 snippet template "Basic template" b
 \documentclass[10pt,a4paper]{article}
 \usepackage[utf8]{inputenc}
-\usepackage[EN, colorbox]{$1/Tron}
-\usepackage{$1/common}
+\usepackage[EN, colorbox]{packatron/$1}
+\usepackage{packatron/raccourcitron}
 
 \author{\href{https://halva.ynh.fr/eliot.tron/}{Eliot Tron}}
 \title{$2}
 \date{$3}
-\logo{{\includegraphics[height=2cm]{$1/logo-ensl.pdf}}}
+\logo{{\includegraphics[height=2cm]{packatron/logos/ensl.pdf}}}
 \begin{document}
-	$0
+
+$0
+
 \end{document}
 endsnippet
 
@@ -58,6 +60,18 @@ snippet fig "Figure environment" b
 \end{figure}
 endsnippet
 
+snippet algo "Algorthm environment" b
+\begin{algorithm}[${1:H}]
+	\DontPrintSemicolon
+	\caption{${3:$2}}
+	\label{fig:${3:${2/\W+/-/g}}}
+	\KwIn{$4}
+	$0
+	\KwOut{$5}
+\end{algorithm}
+endsnippet
+			
+
 snippet enum "Enumerate" bA
 \begin{enumerate}
 	\item $0
@@ -68,12 +82,6 @@ snippet item "Itemize" bA
 \begin{itemize}
 	\item $0
 \end{itemize}
-endsnippet
-
-snippet desc "Description" b
-\begin{description}
-	\item[$1] $0
-\end{description}
 endsnippet
 
 snippet pac "Package" b
@@ -195,28 +203,28 @@ snippet != "equals" iA
 \neq 
 endsnippet
 
-context "math()"
-snippet ceil "ceil" iA
-\left\lceil $1 \right\rceil $0
-endsnippet
+# context "math()"
+# snippet ceil "ceil" iA
+# \left\lceil $1 \right\rceil $0
+# endsnippet
 
-context "math()"
-snippet floor "floor" iA
-\left\lfloor $1 \right\rfloor$0
-endsnippet
+# context "math()"
+# snippet floor "floor" iA
+# \left\lfloor $1 \right\rfloor$0
+# endsnippet
 
-snippet pmat "pmat" iA
-\begin{pmatrix} $1 \end{pmatrix} $0
-endsnippet
+# snippet pmat "pmat" iA
+# \begin{pmatrix} $1 \end{pmatrix} $0
+# endsnippet
 
-snippet bmat "bmat" iA
-\begin{bmatrix} $1 \end{bmatrix} $0
-endsnippet
+# snippet bmat "bmat" iA
+# \begin{bmatrix} $1 \end{bmatrix} $0
+# endsnippet
 
-context "math()"
-snippet () "left( right)" iA
-\left( ${1:${VISUAL}} \right) $0
-endsnippet
+# context "math()"
+# snippet () "left( right)" iA
+# \left( ${1:${VISUAL}} \right) $0
+# endsnippet
 
 snippet lr "left( right)" i
 \left( ${1:${VISUAL}} \right) $0
@@ -321,7 +329,7 @@ snippet >= "geq" iA
 endsnippet
 
 context "math()"
-snippet EE "geq" iA
+snippet EE "exists" iA
 \exists 
 endsnippet
 
@@ -421,10 +429,10 @@ snippet ** "cdot" iA
 \cdot 
 endsnippet
 
-context "math()"
-snippet norm "norm" iA
-\|$1\|$0
-endsnippet
+# context "math()"
+# snippet norm "norm" iA
+# \|$1\|$0
+# endsnippet
 
 priority 100
 context "math()"
@@ -490,10 +498,10 @@ snippet ~~ "~" iA
 \sim 
 endsnippet
 
-context "math()"
-snippet set "set" wA
-\\{$1\\} $0
-endsnippet
+# context "math()"
+# snippet set "set" wA
+# \\{$1\\} $0
+# endsnippet
 
 snippet || "mid" iA
  \mid 
@@ -514,9 +522,9 @@ snippet inn "in " iA
 \in 
 endsnippet
 
-snippet NN "n" iA
-\N
-endsnippet
+# snippet NN "n" iA
+# \N
+# endsnippet
 
 snippet Nn "cap" iA
 \cap 
@@ -534,21 +542,21 @@ snippet nnn "bigcap" iA
 \bigcap_{${1:i \in ${2: I}}} $0
 endsnippet
 
-snippet OO "emptyset" iA
-\O
-endsnippet
+# snippet OO "emptyset" iA
+# \O
+# endsnippet
 
-snippet RR "real" iA
-\R
-endsnippet
+# snippet RR "real" iA
+# \R
+# endsnippet
 
-snippet QQ "Q" iA
-\Q
-endsnippet
+# snippet QQ "Q" iA
+# \Q
+# endsnippet
 
-snippet ZZ "Z" iA
-\Z
-endsnippet
+# snippet ZZ "Z" iA
+# \Z
+# endsnippet
 
 snippet <! "normal" iA
 \triangleleft 
@@ -569,12 +577,12 @@ snippet tt "text" iA
 \text{$1}$0
 endsnippet
 
-context "math()"
-snippet case "cases" wA
-\begin{cases}
-	$1
-\end{cases}
-endsnippet
+# context "math()"
+# snippet case "cases" wA
+# \begin{cases}
+	# $1
+# \end{cases}
+# endsnippet
 
 snippet SI "SI" iA
 \SI{$1}{$2}
@@ -617,15 +625,6 @@ endsnippet
 
 snippet letw "let omega" iA
 Let $\Omega \subset \C$ be open.
-endsnippet
-
-
-snippet HH "H" iA
-\mathbb{H}
-endsnippet
-
-snippet DD "D" iA
-\mathbb{D}
 endsnippet
 
 # vim:ft=snippets
