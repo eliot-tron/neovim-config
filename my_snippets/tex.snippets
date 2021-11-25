@@ -64,11 +64,17 @@ snippet algo "Algorthm environment" b
 \begin{algorithm}[${1:H}]
 	\DontPrintSemicolon
 	\caption{${3:$2}}
-	\label{fig:${3:${2/\W+/-/g}}}
+	\label{algo:${3:${2/\W+/-/g}}}
 	\KwIn{$4}
 	$0
 	\KwOut{$5}
 \end{algorithm}
+endsnippet
+
+snippet frame "Frame environment" b
+\begin{frame}{${1:Title}}
+	$0
+\end{frame}
 endsnippet
 			
 
@@ -448,7 +454,7 @@ endsnippet
 
 priority 200
 context "math()"
-snippet '(?<!\\)(arcsin|arccos|arctan|arccot|arccsc|arcsec|pi|zeta|int)' "ln" rwA
+snippet '(?<!\\)(arcsin|arccos|arctan|arccot|arccsc|arcsec|pi|zeta|int)' "ln" rw
 \\`!p snip.rv = match.group(1)`
 endsnippet
 

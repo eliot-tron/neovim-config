@@ -54,8 +54,8 @@ let g:ale_fixers = {
 
 " CoC options
 " -----------
-inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
-inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
+inoremap <expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
+inoremap <expr><s-tab> pumvisible() ? "\<c-p>" : "\<s-tab>"
 inoremap <silent><expr> <c-space> coc#refresh()
 
 " NERD Commenter options
@@ -71,8 +71,8 @@ let g:NERDToggleCheckAllLines = 1
 " Snippets options
 " ----------------
 let g:UltiSnipsSnippetDirectories=["UltiSnips", "my_snippets"]
-let g:UltiSnipsJumpForwardTrigger="<tab>"
-let g:UltiSnipsJumpBackwardTrigger="<S-tab>"
+let g:UltiSnipsJumpForwardTrigger="<a-j>"
+let g:UltiSnipsJumpBackwardTrigger="<a-k>"
 " to use <cr> as expand trigger - https://github.com/SirVer/ultisnips/issues/376
 let g:UltiSnipsExpandTrigger="<nop>"
 let g:ulti_expand_or_jump_res = 0
