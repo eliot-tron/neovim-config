@@ -31,7 +31,7 @@ inoremap <C-l> <c-g>u<Esc>[s1z=`]a<c-g>u
 " let g:ale_sign_error = '●'
 " let g:ale_sign_warning = '.'
 let g:ale_fixers = {
-		\'python': ['yapf'],
+		\'python': ['yapf', 'autoimport', 'add_blank_lines_for_python_control_statements', 'isort', 'autopep8'],
 		\'tex': ['latexindent'],
 		\ '*': ['remove_trailing_lines', 'trim_whitespace'],
 		\}
