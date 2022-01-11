@@ -21,8 +21,32 @@ snippet template "Basic template" b
 \author{\href{https://halva.ynh.fr/eliot.tron/}{Eliot Tron}}
 \title{$2}
 \date{$3}
-\logo{{\includegraphics[height=2cm]{packatron/logos/ensl.pdf}}}
+\logo{{\includegraphics[height=2cm]{packatron/logos/$4.pdf}}}
 \begin{document}
+
+$0
+
+\end{document}
+endsnippet
+
+snippet beamtemplate "Beamer template" b
+\documentclass[10pt, svgnames]{beamer}
+
+\usetheme[progressbar=frametitle, subsectionpage=progressbar]{metropolis}
+\usepackage{appendixnumberbeamer}
+\usepackage[utf8]{inputenc}
+\usepackage[EN, colorbox]{packatron/presentatron}
+\usepackage{packatron/raccourcitron}
+
+\author{\href{https://halva.ynh.fr/eliot.tron/}{Eliot Tron}}
+\title{$1}
+\date{$2}
+\institute{
+	\raisebox{-0.5\height}{\includegraphics[height=1.2cm]{packatron/logos/$3.pdf}}
+}
+\begin{document}
+
+\maketitle
 
 $0
 
@@ -290,7 +314,12 @@ snippet part "d/dx" w
 endsnippet
 
 context "math()"
-snippet sq "\sqrt{}" iA
+snippet '\\?der' "df/dx" rA
+\der{$1}{$2} $0
+endsnippet
+
+context "math()"
+snippet sq "\sqrt{}" A
 \sqrt{${1:${VISUAL}}} $0
 endsnippet
 
@@ -407,7 +436,7 @@ snippet plot "Plot" w
 endsnippet
 
 snippet nn "Tikz node" w
-\node[$5] (${1/[^0-9a-zA-Z]//g}${2}) ${3:at (${4:0,0}) }{$${1}$};
+\node[$5] (${1/[^0-9a-zA-Z]//g}${2}) ${3:at (${4:0,0}) }{$$ {1}$};
 $0
 endsnippet
 
@@ -519,6 +548,7 @@ snippet cc "subset" Ai
 \subset 
 endsnippet
 
+context "math()"
 snippet notin "not in " iA
 \not\in 
 endsnippet
@@ -599,6 +629,11 @@ snippet bigfun "Big function" iA
 	$1: $2 &\longrightarrow $3 \\\\
 	$4 &\longmapsto $1($4) = $0
 .\end{align*}
+endsnippet
+
+context "math()"
+snippet '\\?fun' "function" rA
+\fun{$1}{$2}{$3}{$4}{$5}$0
 endsnippet
 
 snippet cvec "column vector" iA

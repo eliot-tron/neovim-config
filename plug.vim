@@ -43,6 +43,9 @@ Plug 'mhinz/vim-startify'
 " Highlighting
 " Plug 'sheerun/vim-polyglot'
 Plug 'numirias/semshi', {'do': ':UpdateRemotePlugins'}
+" Makdown
+Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
+
 
 " List ends here. Plugins become visible to Vim after this call.
 call plug#end()

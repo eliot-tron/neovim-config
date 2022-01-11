@@ -14,3 +14,9 @@ let g:vimetex_quickfix_method = "pplatex"
 map <buffer> K <Plug>(vimtex-doc-package)
 
 nnoremap <leader>t :VimtexTocToggle <cr>
+
+" Tex-Live commands:
+command! TexLiveOnFly execute '!texliveonfly "%"'
+command! -nargs=1 TexLiveInstallPackage execute '!tlmgr install <f-args>'
+command! TexLiveUpdatePackage execute '!tlmgr update --self --all'
+
