@@ -13,7 +13,7 @@ set mouse=a
 set number " relativenumber
 " set tabstop=4
 set clipboard=unnamedplus
-set ignorecase	" Do case insensitive matching
+set ignorecase smartcase	" Do case smart insensitive matching
 " Folding
 set foldmethod=indent
 set smartindent " Indentation intelligente
@@ -25,6 +25,10 @@ set linebreak
 set spell
 set spelllang=en,fr
 inoremap <C-l> <c-g>u<Esc>[s1z=`]a<c-g>u
+
+" Popup option
+set pumblend=30
+set pumheight=5
 
 " ALE linter options
 " ------------------
@@ -54,9 +58,32 @@ let g:ale_fixers = {
 
 " CoC options
 " -----------
-inoremap <expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
-inoremap <expr><s-tab> pumvisible() ? "\<c-p>" : "\<s-tab>"
+
+" Use <tab> and <S-tab> to navigate completion list: >
+function! CheckBackspace() abort
+	let col = col('.') - 1
+	return !col || getline('.')[col - 1]  =~ '\s'
+endfunction
+
+" Insert <tab> when previous text is space, refresh completion if not.
+inoremap <silent><expr> <TAB>
+			\ coc#pum#visible() ? coc#pum#next(1):
+			\ CheckBackspace() ? "\<Tab>" :
+			\ coc#refresh()
+inoremap <expr><S-TAB> coc#pum#visible() ? coc#pum#prev(1) : "\<C-h>"
+
 inoremap <silent><expr> <c-space> coc#refresh()
+
+" To make <CR> to confirm selection of selected complete item or notify coc.nvim
+" to format on enter, use: >
+inoremap <silent><expr> <CR> coc#pum#visible() ? coc#_select_confirm()
+			\ : "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
+" Use <C-j> for jump to next placeholder, it's default of coc.nvim
+let g:coc_snippet_next = '<a-j>'
+
+" Use <C-k> for jump to previous placeholder, it's default of coc.nvim
+let g:coc_snippet_prev = '<a-k>'
+
 
 " NERD Commenter options
 " ----------------------
@@ -71,20 +98,21 @@ let g:NERDToggleCheckAllLines = 1
 " Snippets options
 " ----------------
 let g:UltiSnipsSnippetDirectories=["UltiSnips", "my_snippets"]
-let g:UltiSnipsJumpForwardTrigger="<a-j>"
-let g:UltiSnipsJumpBackwardTrigger="<a-k>"
+" let g:UltiSnipsJumpForwardTrigger="<a-j>"
+" let g:UltiSnipsJumpBackwardTrigger="<a-k>"
+" let g:UltiSnipsExpandTrigger='<Tab>'
 " to use <cr> as expand trigger - https://github.com/SirVer/ultisnips/issues/376
-let g:UltiSnipsExpandTrigger="<nop>"
-let g:ulti_expand_or_jump_res = 0
-function! <SID>ExpandSnippetOrReturn()
-  let snippet = UltiSnips#ExpandSnippetOrJump()
-  if g:ulti_expand_or_jump_res > 0
-    return snippet
-  else
-    return "\<CR>"
-  endif
-endfunction
-inoremap <expr> <CR> pumvisible() ? "<C-R>=<SID>ExpandSnippetOrReturn()<CR>" : "\<CR>"
+" let g:UltiSnipsExpandTrigger="<nop>"
+" let g:ulti_expand_or_jump_res = 0
+" function! <SID>ExpandSnippetOrReturn()
+  " let snippet = UltiSnips#ExpandSnippetOrJump()
+  " if g:ulti_expand_or_jump_res > 0
+    " return snippet
+  " else
+    " return "\<CR>"
+  " endif
+" endfunction
+" inoremap <expr> <CR> pumvisible() ? "<C-R>=<SID>ExpandSnippetOrReturn()<CR>" : "\<CR>"
 
 " Ranger options
 " --------------

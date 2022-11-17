@@ -28,11 +28,12 @@ Plug 'w0rp/ale'
 " Plug 'shougo/deoplete.nvim'
 " Plug 'deoplete-plugins/deoplete-jedi'
 Plug 'neoclide/coc.nvim'
+" need to run coc-install coc-snippets
 
 " To Comment stuff
 Plug 'scrooloose/nerdcommenter'
 " Snipsets
-Plug 'sirver/ultisnips'
+" Plug 'sirver/ultisnips'
 Plug 'honza/vim-snippets'
 " LaTeX
 Plug 'lervag/vimtex'
