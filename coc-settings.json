@@ -1,7 +1,7 @@
 {
 	"diagnostic.enable": false,
 	"suggest.noselect": true,
-	"snippets.ultisnips.directories": ["UltiSnips", "my_snippets"],
+	"snippets.ultisnips.directories": ["my_snippets", "UltiSnips"],
 	"suggest.floatConfig.winblend": 20,
 	"suggest.floatConfig.pumHeight": 5
 }

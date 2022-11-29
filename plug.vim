@@ -30,6 +30,9 @@ Plug 'w0rp/ale'
 Plug 'neoclide/coc.nvim'
 " need to run coc-install coc-snippets
 
+" To go faster
+Plug 'easymotion/vim-easymotion'
+
 " To Comment stuff
 Plug 'scrooloose/nerdcommenter'
 " Snipsets

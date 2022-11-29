@@ -538,6 +538,11 @@ endsnippet
 # \\{$1\\} $0
 # endsnippet
 
+context "math()"
+snippet nset "nset" w
+\\nset{$1:1}{$2:n}$0
+endsnippet
+
 snippet || "mid" iA
  \mid 
 endsnippet
@@ -609,8 +614,13 @@ _\text{$1} $0
 endsnippet
 
 context "math()"
-snippet tt "text" iA
+snippet tt "text" i
 \text{$1}$0
+endsnippet
+
+context "math()"
+snippet tq "quad text" i
+\quad \text{$1} \quad $0
 endsnippet
 
 # context "math()"
