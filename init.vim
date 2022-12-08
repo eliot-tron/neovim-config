@@ -7,6 +7,7 @@ source ~/.config/nvim/plug.vim
 let g:gruvbox_italic=1
 colorscheme gruvbox
 set termguicolors
+let g:airline_theme='gruvbox'
 
 " Random settings
 set mouse=a

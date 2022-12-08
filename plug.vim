@@ -6,6 +6,7 @@ call plug#begin(has('nvim') ? stdpath('data') . '/plugged' : '~/.vim/plugged')
 
 " Git
 Plug 'tpope/vim-fugitive'
+Plug 'airblade/vim-gitgutter'
 " Parentheses and stuff
 Plug 'tpope/vim-surround'
 " A tree explorer
@@ -20,6 +21,7 @@ Plug 'hynek/vim-python-pep8-indent'
 Plug 'morhetz/gruvbox'
 " Status/tab bar
 Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 " Linter
 Plug 'w0rp/ale'
 " Autocompletion
@@ -27,7 +29,7 @@ Plug 'w0rp/ale'
 " Plug 'valloric/youcompleteme'
 " Plug 'shougo/deoplete.nvim'
 " Plug 'deoplete-plugins/deoplete-jedi'
-Plug 'neoclide/coc.nvim'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 " need to run coc-install coc-snippets
 
 " To go faster
