@@ -3,7 +3,6 @@
 call plug#begin(has('nvim') ? stdpath('data') . '/plugged' : '~/.vim/plugged')
 
 " Declare the list of plugins.
-
 " Git
 Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
@@ -23,7 +22,7 @@ Plug 'morhetz/gruvbox'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 " Linter
-Plug 'w0rp/ale'
+" Plug 'w0rp/ale'
 " Autocompletion
 " had do do `conda install -c anaconda libstdcxx-ng`
 " Plug 'valloric/youcompleteme'
@@ -52,6 +51,8 @@ Plug 'numirias/semshi', {'do': ':UpdateRemotePlugins'}
 " Makdown
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
 
+" Nerdfont Icons
+Plug 'ryanoasis/vim-devicons'
 
 " List ends here. Plugins become visible to Vim after this call.
 call plug#end()
