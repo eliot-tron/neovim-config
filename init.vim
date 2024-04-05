@@ -217,3 +217,6 @@ let g:mkdp_filetypes = ['markdown']
 
 " VimTex
 let g:tex_flavor = 'latex'
+
+" Vim Side Search
+nnoremap <Leader>ss :SideSearch <C-r><C-w><CR> | wincmd p

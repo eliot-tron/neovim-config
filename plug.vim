@@ -11,6 +11,11 @@ Plug 'tpope/vim-surround'
 " A tree explorer
 Plug 'francoiscabrol/ranger.vim'
 Plug 'rbgrouleff/bclose.vim'
+" A sidebar
+Plug 'preservim/nerdtree'
+Plug 'jistr/vim-nerdtree-tabs'
+" A sidesearch
+Plug 'ddrscott/vim-side-search'
 " Indent lines for guide
 " Plug 'nathanaelkane/vim-indent-guides'
 " Auto-indent stuff
