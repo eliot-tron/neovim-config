@@ -35,6 +35,11 @@ Plug 'vim-airline/vim-airline-themes'
 " Plug 'deoplete-plugins/deoplete-jedi'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 " need to run coc-install coc-snippets
+" Debuger
+Plug 'mfussenegger/nvim-dap'
+Plug 'mfussenegger/nvim-dap-python'
+Plug 'nvim-neotest/nvim-nio'
+Plug 'rcarriga/nvim-dap-ui'
 
 " To go faster
 Plug 'easymotion/vim-easymotion'
