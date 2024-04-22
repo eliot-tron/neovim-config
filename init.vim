@@ -220,3 +220,30 @@ let g:tex_flavor = 'latex'
 
 " Vim Side Search
 nnoremap <Leader>ss :SideSearch <C-r><C-w><CR> | wincmd p
+
+
+" Vim Dap debugger
+lua << EOF
+require("dap-python").setup('~/.conda/envs/debugpy/bin/python')
+require("dapui").setup()
+local dap, dapui = require("dap"), require("dapui")
+dap.listeners.before.attach.dapui_config = function()
+  dapui.open()
+end
+dap.listeners.before.launch.dapui_config = function()
+  dapui.open()
+end
+dap.listeners.before.event_terminated.dapui_config = function()
+  dapui.close()
+end
+dap.listeners.before.event_exited.dapui_config = function()
+  dapui.close()
+end
+EOF
+
+nnoremap <silent> <F5> :lua require('dap').continue()<CR>
+nnoremap <silent> <leader>b :lua require('dap').toggle_breakpoint()<CR>
+
+nnoremap <silent> <leader>dn :lua require('dap-python').test_method()<CR>
+nnoremap <silent> <leader>df :lua require('dap-python').test_class()<CR>
+vnoremap <silent> <leader>ds <ESC>:lua require('dap-python').debug_selection()<CR>
