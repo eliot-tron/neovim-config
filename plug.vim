@@ -42,7 +42,7 @@ Plug 'nvim-neotest/nvim-nio'
 Plug 'rcarriga/nvim-dap-ui'
 
 " To go faster
-Plug 'easymotion/vim-easymotion'
+" Plug 'easymotion/vim-easymotion'
 
 " To Comment stuff
 Plug 'scrooloose/nerdcommenter'
@@ -57,12 +57,24 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'mhinz/vim-startify'
 " Highlighting
 " Plug 'sheerun/vim-polyglot'
-Plug 'numirias/semshi', {'do': ':UpdateRemotePlugins'}
+" Plug 'numirias/semshi', {'do': ':UpdateRemotePlugins'} " -> not maintained anymore 
 " Makdown
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
 
 " Nerdfont Icons
 Plug 'ryanoasis/vim-devicons'
+" Plug 'nvim-tree/nvim-web-devicons'
+" Insert Unicode symbols
+Plug 'chrisbra/unicode.vim'
 
-" List ends here. Plugins become visible to Vim after this call.
+" Orgmode
+Plug 'nvim-orgmode/orgmode'
+" Tree sitter
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+" Need to install tree-sitter-cli as well with your package manager.
+"
+"
+"
+"
+"" List ends here. Plugins become visible to Vim after this call.
 call plug#end()
