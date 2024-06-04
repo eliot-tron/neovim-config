@@ -2,7 +2,7 @@
 	"diagnostic.enable": true,
 	"suggest.noselect": true,
 	"snippets.ultisnips.directories": ["my_snippets", "UltiSnips"],
-	"suggest.floatConfig.winblend": 20,
+	"suggest.floatConfig.winblend": 30,
 	"suggest.floatConfig.pumHeight": 5,
 	"snippets.ultisnips.pythonPrompt": false
 }

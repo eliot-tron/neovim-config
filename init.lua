@@ -3,11 +3,12 @@
 -- ]])
 
 -- plug-vim conf
-vim.cmd([[
-source ~/.config/nvim/plug.vim
-]])
+-- vim.cmd([[
+-- source ~/.config/nvim/plug.vim
+-- ]])
 
 -- load exteral files
+require("plug")
 require("coc-settings")
 require("treesitter-settings")
 require("orgmode-settings")
@@ -39,7 +40,7 @@ vim.opt.spell = true
 vim.opt.spelllang = 'en,fr'
 
 -- popup option
-vim.opt.pumblend = 30
+vim.opt.pumblend = 30 -- overwritten by ~./coc-settings.json
 vim.opt.pumheight = 5
 
 vim.cmd 'filetype plugin on'
