@@ -1,10 +1,12 @@
 {
 	"diagnostic.enable": true,
 	"suggest.noselect": true,
-	"snippets.ultisnips.directories": ["my_snippets", "UltiSnips"],
-	"suggest.floatConfig.winblend": 30,
-	"suggest.floatConfig.pumHeight": 5,
-	"snippets.ultisnips.pythonPrompt": false
+	"snippets.ultisnips.directories": ["my_snippets"],
+	"suggest.floatConfig": {"winblend": 30},
+	"coc.source.omni.filetypes": ["org", "orgmode"],
+	"pyright.inlayHints.variableTypes": false,
+	"pyright.inlayHints.parameterTypes": false,
+	"pyright.inlayHints.functionReturnTypes": false,
 }
 
 

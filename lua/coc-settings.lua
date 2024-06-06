@@ -1,5 +1,16 @@
 -- https://raw.githubusercontent.com/neoclide/coc.nvim/master/doc/coc-example-config.lua
 
+-- Install useful extensions
+vim.g.coc_global_extensions = {	'coc-snippets',
+	'coc-dictionary',
+	'coc-word',
+	'coc-omni',
+	'coc-marketplace',
+	'coc-pyright',
+	'coc-pydocstring',
+	'coc-json',
+}
+
 -- Some servers have issues with backup files, see #649
 vim.opt.backup = false
 vim.opt.writebackup = false

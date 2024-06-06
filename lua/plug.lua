@@ -34,7 +34,7 @@ Plug('vim-airline/vim-airline-themes')
 -- Plug('shougo/deoplete.nvim')
 -- Plug('deoplete-plugins/deoplete-jedi')
 Plug('neoclide/coc.nvim', {['branch'] = 'release'})
--- need to run coc-install coc-snippets
+-- need to run CocInstall coc-snippets
 -- Debuger
 Plug('mfussenegger/nvim-dap')
 Plug('mfussenegger/nvim-dap-python')
@@ -48,7 +48,7 @@ Plug('rcarriga/nvim-dap-ui')
 Plug('scrooloose/nerdcommenter')
 -- Snipsets
 -- Plug('sirver/ultisnips')
--- Plug('honza/vim-snippets')
+Plug('honza/vim-snippets')
 -- LaTeX
 Plug('lervag/vimtex')
 -- Auto Pair
