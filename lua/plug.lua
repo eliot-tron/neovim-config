@@ -70,6 +70,7 @@ Plug('chrisbra/unicode.vim')
 Plug('nvim-orgmode/orgmode')
 -- Tree sitter
 Plug('nvim-treesitter/nvim-treesitter', {['do'] = ':TSUpdate'})
+Plug('nvim-treesitter/nvim-treesitter-context')
 -- Need to install tree-sitter-cli as well with your package manager.
 
 vim.call('plug#end')
