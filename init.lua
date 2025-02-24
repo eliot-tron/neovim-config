@@ -11,10 +11,11 @@
 require("plug")
 require("coc-settings")
 require("treesitter-settings")
-require("orgmode-settings")
+-- require("orgmode-settings")
 require("dap-settings")
 require("nerdcommenter-settings")
 require("mappings")
+require("fzf-settings")
 
 -- Color scheme
 vim.g.gruvbox_italic = 1
@@ -27,6 +28,7 @@ vim.opt.encoding = 'UTF-8'
 vim.opt.mouse = 'a'
 vim.opt.number = true
 vim.opt.clipboard = 'unnamedplus'
+vim.opt.ignorecase = true
 vim.opt.smartcase = true
 vim.opt.foldmethod = 'expr'
 vim.opt.foldexpr = 'nvim_treesitter#foldexpr()'

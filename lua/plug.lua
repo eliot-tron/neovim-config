@@ -67,10 +67,12 @@ Plug('ryanoasis/vim-devicons')
 Plug('chrisbra/unicode.vim')
 
 -- Orgmode
-Plug('nvim-orgmode/orgmode')
+-- Plug('nvim-orgmode/orgmode')
 -- Tree sitter
 Plug('nvim-treesitter/nvim-treesitter', {['do'] = ':TSUpdate'})
 Plug('nvim-treesitter/nvim-treesitter-context')
 -- Need to install tree-sitter-cli as well with your package manager.
 
+-- FZF
+Plug('ibhagwan/fzf-lua')
 vim.call('plug#end')

@@ -154,3 +154,10 @@ keyset("n", "<space>p", ":<C-u>CocListResume<cr>", opts)
 -- NERTTreeTab --
 
 keyset("n", "<leader>nt", ":NERDTreeToggle<cr>", {silent = true} )
+
+-- fzf-lua -- 
+keyset("n", "<space><space>", require("fzf-lua").builtin)
+keyset("n", "<space>f", require("fzf-lua").files)
+keyset("n", "<space>b", require("fzf-lua").buffers)
+keyset("n", "<space>g", require("fzf-lua").grep_project)
+keyset("n", "<space>r", require("fzf-lua").resume)

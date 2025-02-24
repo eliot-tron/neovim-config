@@ -9,6 +9,7 @@ vim.g.coc_global_extensions = {	'coc-snippets',
 	'coc-pyright',
 	'coc-pydocstring',
 	'coc-json',
+	'coc-vimtex',
 }
 
 -- Some servers have issues with backup files, see #649
