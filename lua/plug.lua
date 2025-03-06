@@ -24,8 +24,9 @@ Plug('godlygeek/tabular')
 -- Retro groove color scheme
 Plug('morhetz/gruvbox')
 -- Status/tab bar
-Plug('vim-airline/vim-airline')
-Plug('vim-airline/vim-airline-themes')
+Plug('nvim-lualine/lualine.nvim')
+-- Plug('vim-airline/vim-airline')
+-- Plug('vim-airline/vim-airline-themes')
 -- Linter
 -- Plug('w0rp/ale')
 -- Autocompletion

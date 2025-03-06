@@ -16,6 +16,7 @@ require("dap-settings")
 require("nerdcommenter-settings")
 require("mappings")
 require("fzf-settings")
+require("lualine-settings")
 
 -- Color scheme
 vim.g.gruvbox_italic = 1
