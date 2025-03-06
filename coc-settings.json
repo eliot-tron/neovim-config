@@ -3,11 +3,8 @@
 	"suggest.noselect": true,
 	"snippets.ultisnips.directories": ["my_snippets"],
 	"suggest.floatConfig": {"winblend": 30},
-	"coc.source.omni.filetypes": ["org", "orgmode"],
 	"pyright.inlayHints.variableTypes": false,
 	"pyright.inlayHints.parameterTypes": false,
-  "pyright.inlayHints.functionReturnTypes": false,
-  "snippets.ultisnips.pythonPrompt": false,
+	"pyright.inlayHints.functionReturnTypes": false,
+	"snippets.ultisnips.pythonPrompt": false,
 }
-
-
