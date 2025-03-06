@@ -17,6 +17,7 @@ keyset('n', '<Leader>ss', ':SideSearch <C-r><C-w><CR> | wincmd p')
 
 -- Vim Dap debugger --
 keyset('n', '<F5>', require('dap').continue)
+keyset('n', '<leader>de', require('dapui').eval)
 keyset('n', '<leader>b', require('dap').toggle_breakpoint)
 keyset('n', '<leader>dn', require('dap-python').test_method)
 keyset('n', '<leader>df', require('dap-python').test_class)
