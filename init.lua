@@ -38,6 +38,7 @@ vim.opt.smartindent = true
 vim.opt.autoindent = true
 vim.opt.ruler = true
 vim.opt.linebreak = true
+vim.g.mapleader = "_"
 
 -- spell check
 vim.opt.spell = true
