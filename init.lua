@@ -7,17 +7,9 @@
 -- source ~/.config/nvim/plug.vim
 -- ]])
 
--- load exteral files
+-- load plug
 require("plug")
-require("coc-settings")
-require("treesitter-settings")
--- require("orgmode-settings")
-require("dap-settings")
-require("nerdcommenter-settings")
-require("mappings")
-require("fzf-settings")
-require("lualine-settings")
-require("NERDTree-settings")
+vim.g.mapleader = "_"
 
 -- Color scheme
 vim.g.gruvbox_italic = 1
@@ -38,7 +30,6 @@ vim.opt.smartindent = true
 vim.opt.autoindent = true
 vim.opt.ruler = true
 vim.opt.linebreak = true
-vim.g.mapleader = "_"
 
 -- spell check
 vim.opt.spell = true
@@ -58,3 +49,13 @@ vim.api.nvim_create_autocmd('TermOpen', {
 
 -- VimTex
 vim.g.tex_flavor = 'latex'
+
+-- load settings
+require("coc-settings")
+require("treesitter-settings")
+require("dap-settings")
+require("nerdcommenter-settings")
+require("mappings")
+require("fzf-settings")
+require("lualine-settings")
+require("NERDTree-settings")
