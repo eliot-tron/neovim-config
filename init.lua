@@ -10,6 +10,7 @@
 -- load plug
 require("plug")
 vim.g.mapleader = "_"
+vim.g.maplocalleader = "_"
 
 -- Color scheme
 vim.g.gruvbox_italic = 1
