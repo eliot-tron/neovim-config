@@ -43,4 +43,25 @@ require("fzf-lua").setup{
 			["shift-up"]    = "preview-page-up",
 		},
 	},
+	-- grep = {
+	-- 	no_ignore = false,
+	-- },
+	-- files = {
+	-- 	no_ignore = false,
+	-- },
+	file_ignore_patterns = {
+		".git/",
+		".aux",
+		".bbl",
+		".bcf",
+		".blg",
+		".fdb_latexmk",
+		".fls",
+		".log",
+		".out",
+		".pdf",
+		".run.xml",
+		".synctex.gz",
+		".toc",
+	},
 }
