@@ -6,5 +6,6 @@
 	"pyright.inlayHints.variableTypes": false,
 	"pyright.inlayHints.parameterTypes": false,
 	"pyright.inlayHints.functionReturnTypes": false,
-	"snippets.execContext": true,
+  "snippets.execContext": true,
+  "snippets.ultisnips.pythonPrompt": false,
 }

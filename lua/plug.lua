@@ -22,7 +22,8 @@ Plug('ddrscott/vim-side-search')
 Plug('godlygeek/tabular')
 -- Plug('hynek/vim-python-pep8-indent')
 -- Retro groove color scheme
-Plug('morhetz/gruvbox')
+-- Plug('morhetz/gruvbox')
+Plug('ellisonleao/gruvbox.nvim')
 -- Status/tab bar
 Plug('nvim-lualine/lualine.nvim')
 -- Plug('vim-airline/vim-airline')
