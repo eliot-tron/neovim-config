@@ -30,9 +30,9 @@ $0
 endsnippet
 
 snippet beamtemplate "Beamer template" b
-\documentclass[10pt, svgnames]{beamer}
+\documentclass[10pt, svgnames, aspectratio=169]{beamer}
 
-\usetheme[progressbar=frametitle, subsectionpage=progressbar]{metropolis}
+\usetheme[progressbar=frametitle, subsectionpage=progressbar]{moloch}
 \usepackage{appendixnumberbeamer}
 \usepackage[utf8]{inputenc}
 \usepackage[EN, colorbox]{packatron/presentatron}
@@ -41,9 +41,10 @@ snippet beamtemplate "Beamer template" b
 \author{\href{https://halva.ynh.fr/eliot.tron/}{Eliot Tron}}
 \title{$1}
 \date{$2}
-\institute{
-	\raisebox{-0.5\height}{\includegraphics[height=1.2cm]{packatron/logos/$3.pdf}}
+\titlegraphic{
+	\raisebox{-0.5\height}{\includegraphics[height=1.2cm]{packatron/logos/$3}}
 }
+\institute{$4}
 \begin{document}
 
 \maketitle
