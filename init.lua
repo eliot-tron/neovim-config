@@ -23,6 +23,7 @@ vim.g.airline_theme = 'gruvbox'
 vim.opt.encoding = 'UTF-8'
 vim.opt.mouse = 'a'
 vim.opt.number = true
+vim.wo.relativenumber = true
 vim.opt.clipboard = 'unnamedplus'
 vim.opt.ignorecase = true
 vim.opt.smartcase = true
