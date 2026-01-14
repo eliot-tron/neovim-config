@@ -7,6 +7,8 @@ end
 -- vim --
 keyset('i', '<C-l>', '<c-g>u<Esc>[s1z=`]a<c-g>u', {noremap=true}) -- quick fix last spelling
 
+-- terminal --
+keyset('t', '<Esc>', '<C-\\><C-n>') -- Esc to escape terminal.
 
 -------------
 -- Plugins --
