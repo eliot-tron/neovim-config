@@ -166,6 +166,10 @@ keyset("n", "<space><space>", require("fzf-lua").builtin)
 keyset("n", "<space>f", require("fzf-lua").files)
 keyset("n", "<space>b", require("fzf-lua").buffers)
 keyset("n", "<space>g", require("fzf-lua").grep_project)
-keyset("n", "<space>t", ":lua require('fzf-lua').grep_project({search='TODO|HACK|PERF|NOTE|FIX', no_esc=true, rg_opts = {'--ignore-case'}})<cr>")
+-- keyset("n", "<space>t", ":lua require('fzf-lua').grep_project({search='TODO|HACK|PERF|NOTE|FIX', no_esc=true, rg_opts = {'--ignore-case'}})<cr>")
+keyset("n", "<space>t", ":TodoFzfLua<cr>")
 keyset("n", "<space>r", require("fzf-lua").resume)
 keyset("n", "<space>z", require("fzf-lua").spell_suggest)
+
+-- todo-comments --
+keyset("n", "<leader>t", ":TodoQuickFix<cr>")

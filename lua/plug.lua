@@ -77,4 +77,10 @@ Plug('nvim-treesitter/nvim-treesitter-context')
 
 -- FZF
 Plug('ibhagwan/fzf-lua')
+
+-- todo-comments
+Plug('folke/todo-comments.nvim')
+Plug('nvim-lua/plenary.nvim') -- dependency
+-- Need to install ripgrep as well with your package manager
+
 vim.call('plug#end')
