@@ -1,7 +1,7 @@
 " LaTeX specific commands
 
 setlocal tabstop=2
-let g:vimtex_compiler_engine='lualatex'
+let g:vimtex_compiler_engine='pdflatex'
 let g:vimtex_fold_manual = 'true'
 let g:vimtex_view_method = "zathura"
 let g:vimtex_quickfix_open_on_warning = 0
