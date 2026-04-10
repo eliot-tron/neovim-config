@@ -43,6 +43,8 @@ Plug('mfussenegger/nvim-dap-python')
 Plug('nvim-neotest/nvim-nio')
 Plug('rcarriga/nvim-dap-ui')
 
+-- Jupyter notebook
+Plug('goerz/jupytext.nvim')
 -- To go faster
 -- Plug('easymotion/vim-easymotion')
 

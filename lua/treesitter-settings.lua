@@ -2,10 +2,10 @@ require'nvim-treesitter'.setup {
   -- Directory to install parsers and queries to (prepended to `runtimepath` to have priority)
   install_dir = vim.fn.stdpath('data') .. '/site',
 }
-require'nvim-treesitter'.install { "c", "lua", "vim", "vimdoc", "query", "python", "latex" }
+require'nvim-treesitter'.install { "c", "lua", "vim", "vimdoc", "query", "python", "latex", "markdown", "markdown_inline" }
 
 vim.api.nvim_create_autocmd('FileType', {
-	pattern = { "c", "lua", "vim", "vimdoc", "query", "python", "latex" },
+	pattern = { "c", "lua", "vim", "vimdoc", "query", "python", "latex", "markdown", "markdown_inline" },
 	callback = function() 
 		vim.treesitter.start()
 		vim.wo[0][0].foldexpr = 'v:lua.vim.treesitter.foldexpr()'
