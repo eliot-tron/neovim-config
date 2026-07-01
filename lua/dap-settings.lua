@@ -1,4 +1,4 @@
-require("dap-python").setup('~/.conda/envs/debugpy/bin/python')
+require("dap-python").setup('~/.python-venv/.debugpy/bin/python')
 require("dapui").setup()
 local dap, dapui = require("dap"), require("dapui")
 dap.listeners.before.attach.dapui_config = function()
