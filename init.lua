@@ -31,6 +31,7 @@ vim.opt.foldmethod = 'expr'
 vim.opt.foldexpr = 'v:lua.vim.treesitter.foldexpr()'
 vim.opt.smartindent = true
 vim.opt.autoindent = true
+vim.opt.foldlevelstart = 99 -- don't start folded.
 vim.opt.ruler = true
 vim.opt.linebreak = true
 
