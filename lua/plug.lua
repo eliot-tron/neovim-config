@@ -63,6 +63,7 @@ Plug('mhinz/vim-startify')
 -- Plug('numirias/semshi', {['do'] = ':UpdateRemotePlugins'} " -> not maintained anymore )
 -- Makdown
 -- Plug('iamcco/markdown-preview.nvim', {['do'] = vim.cmd([[-> mkdp#util#install()]]), ['for'] = ['markdown', 'vim-plug']})
+Plug('OXY2DEV/markview.nvim')
 
 -- Nerdfont Icons
 Plug('ryanoasis/vim-devicons')
