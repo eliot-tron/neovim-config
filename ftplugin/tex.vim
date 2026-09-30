@@ -1,6 +1,9 @@
 " LaTeX specific commands
 
-setlocal tabstop=2
+" source: https://stackoverflow.com/questions/1878974/redefine-tab-as-4-spaces
+setlocal tabstop=4
+setlocal shiftwidth=4 smarttab
+
 let g:vimtex_compiler_engine='lualatex'
 let g:vimtex_fold_manual = 'true'
 let g:vimtex_view_method = "zathura"
